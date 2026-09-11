@@ -16,7 +16,9 @@ définitivement fermée, l'hébergement est obligatoire.
 | Fichier | Rôle |
 |---|---|
 | `index.html` | La fiche. Autonome, ~6 ko, mobile-first, mode sombre inclus. À la racine : c'est elle que sert l'URL du QR. |
-| `qr_fiche.svg` / `.png` | QR pointant vers l'URL de production. Le SVG est le fichier à placer sur l'étiquette. |
+| `qr_fiche.svg` / `.png` | QR pointant vers l'URL de production, sans dimension physique imposée. |
+| `qr_fiche_30mm.svg`, `_35mm`, `_40mm` | Le même QR, mais dimensionné en mm : le carré complet (code + zone silencieuse) mesure exactement 30, 35 ou 40 mm. **Ce sont ces fichiers-là qu'on envoie à l'imprimeur** — aucune mise à l'échelle à refaire. |
+| `qr_fiche_600dpi.png` | Version raster 600 dpi, pour un flux d'impression qui refuse le vectoriel. |
 | `gen_qr_url.py` | Régénère le QR. `python gen_qr_url.py <URL>` (dépend de `segno` ; `matplotlib` seulement pour `draw_qr`, importé à la demande). |
 | `.nojekyll` | Désactive Jekyll sur Pages : le HTML est servi tel quel. |
 
@@ -41,7 +43,7 @@ Cette URL sort en **version 4 (33 × 33 modules)**, ECC Q :
 | 35 mm | 0,85 |
 | 40 mm | 0,98 |
 
-Viser **35 mm de côté** pour tenir la marge de ~0,8 mm par module sur une porte
+Utiliser `qr_fiche_35mm.svg`. Viser **35 mm de côté** pour tenir la marge de ~0,8 mm par module sur une porte
 d'armoire empoussiérée ; 30 mm reste scannable sur une étiquette propre. Zone
 silencieuse blanche de 4 modules conservée — ne pas rogner.
 
