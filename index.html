@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Armoire d’injection — Tetra Canette</title>
+<meta name="theme-color" content="#0E1A33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFBF8;
+    --ink:#0E1A33;
+    --ink-soft:#5A6478;
+    --rule:#C6CDD9;
+    --rule-fine:#E3E7ED;
+    --o1:#1F6FB2;
+    --o2:#C87A17;
+    --o3:#2C8264;
+    --o4:#A33A57;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Barlow","Helvetica Neue",Arial,sans-serif;
+    font-size:16px;
+    line-height:1.45;
+    -webkit-text-size-adjust:100%;
+    font-variant-numeric:tabular-nums;
+    padding:0 0 2.5rem;
+  }
+  .sheet{max-width:430px;margin:0 auto;padding:0 1.15rem}
+
+  /* --- cartouche, repris du bloc titre du plan --- */
+  header{
+    background:var(--ink);color:#fff;
+    padding:1.1rem 1.15rem 0.95rem;
+    margin-bottom:1.4rem;
+  }
+  header .inner{max-width:430px;margin:0 auto}
+  .owner{font-family:"Barlow Semi Condensed",sans-serif;font-size:1.65rem;font-weight:600;letter-spacing:.01em;line-height:1.05;margin:0}
+  .subject{margin:.15rem 0 .9rem;font-size:1rem;color:#AFBBD2;font-weight:400}
+  .idline{
+    display:flex;gap:.9rem;flex-wrap:wrap;align-items:baseline;
+    border-top:1px solid rgba(255,255,255,.22);padding-top:.6rem;
+    font-family:"Barlow Semi Condensed",sans-serif;font-size:.95rem;color:#AFBBD2;
+  }
+  .idline b{color:#fff;font-weight:500}
+
+  /* --- hero : mini-plan des nefs, couleurs onduleur --- */
+
+  /* --- chiffres cles --- */
+  .headline{
+    display:flex;align-items:baseline;gap:.5rem;
+    border-bottom:2px solid var(--ink);padding-bottom:.35rem;margin-bottom:1.1rem;
+  }
+  .headline .val{font-family:"Barlow Semi Condensed",sans-serif;font-size:2.9rem;font-weight:600;line-height:.95}
+  .headline .unit{font-size:1.1rem;color:var(--ink-soft)}
+
+  dl{margin:0 0 1.7rem;display:grid;grid-template-columns:1fr auto;gap:0}
+  dt,dd{margin:0;padding:.5rem 0;font-size:1rem;border-bottom:1px dotted var(--rule)}
+  dt{color:var(--ink-soft)}
+  dd{text-align:right;font-weight:500}
+
+  h2{
+    font-family:"Barlow Semi Condensed",sans-serif;
+    font-size:1.15rem;font-weight:600;margin:0 0 .55rem;
+    padding-bottom:.3rem;border-bottom:1px solid var(--rule);
+  }
+  table{width:100%;border-collapse:collapse;margin-bottom:1.6rem;font-size:1rem}
+  .sub{display:block;font-size:.85rem;color:var(--ink-soft);font-weight:400;margin-left:1.35rem}
+  td{padding:.5rem 0;border-bottom:1px solid var(--rule-fine)}
+  td:last-child{text-align:right;font-weight:500;vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  .tag{display:inline-flex;align-items:center;gap:.5rem;font-weight:500}
+  .chip{width:.85rem;height:.85rem;border-radius:2px;flex:0 0 auto}
+  .c1{background:var(--o1)} .c2{background:var(--o2)} .c3{background:var(--o3)} .c4{background:var(--o4)}
+  tfoot td{border-top:2px solid var(--ink);border-bottom:0;font-weight:600;padding-top:.5rem}
+
+  .note{font-size:.92rem;color:var(--ink-soft);border-left:3px solid var(--rule);padding-left:.8rem;margin:0 0 1.6rem}
+  footer{font-size:.85rem;color:var(--ink-soft);border-top:1px solid var(--rule);padding-top:.7rem}
+  footer b{color:var(--ink);font-weight:500}
+  @media (prefers-color-scheme: dark){
+    :root{--paper:#12141A;--ink:#F2F3F5;--ink-soft:#98A0B0;--rule:#3A404C;--rule-fine:#262A33}
+    header{background:#0A0F1C}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <p class="owner">ARMOIRE D’INJECTION</p>
+    <p class="subject">Tetra Canette — raccordement PV et stockage au PDL</p>
+    <div class="idline">
+      <span>PV <b>4 × 250 A</b></span>
+      <span>Stockage <b>3 × 250 A</b></span>
+      <span>Injection <b>2 × 800 A</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="sheet">
+
+  <div class="headline">
+    <span class="val">605,8</span><span class="unit">kWc DC · 600 kVA AC</span>
+  </div>
+
+  <h2>Composition de l’armoire</h2>
+  <table>
+    <tbody>
+      <tr><td>Arrivées PV<span class="sub">une par onduleur</span></td><td>4 × 250 A</td></tr>
+      <tr><td>Arrivées stockage<span class="sub">batteries</span></td><td>3 × 250 A</td></tr>
+      <tr><td>Jeu de barres<span class="sub">PV + stockage</span></td><td>7 arrivées</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>Injection vers PDL<span class="sub">deux départs</span></td><td>2 × 800 A</td></tr>
+    </tfoot>
+  </table>
+
+  <h2>Champ photovoltaïque</h2>
+  <dl>
+    <dt>Puissance DC</dt><dd>605,8 kWc</dd>
+    <dt>Puissance AC</dt><dd>600 kVA</dd>
+    <dt>Modules</dt><dd>954 × 635 Wc</dd>
+    <dt>Type</dt><dd>Jinko JKM635N bifacial</dd>
+    <dt>Strings</dt><dd>53 × 18 modules</dd>
+    <dt>Onduleurs</dt><dd>4 × SUN2000-150K</dd>
+    <dt>Câble DC</dt><dd>6 mm² Cu</dd>
+    <dt>Câble AC</dt><dd>120 mm² Al</dd>
+    <dt>Chute de tension AC</dt><dd>2,29 % max</dd>
+  </dl>
+
+  <h2>Arrivées PV par onduleur</h2>
+  <table>
+    <tbody>
+      <tr><td><span class="tag"><span class="chip c1"></span>ONDU 1 — 250 A</span><span class="sub">14 strings · 252 modules</span></td><td>160,0 kWc</td></tr>
+      <tr><td><span class="tag"><span class="chip c2"></span>ONDU 2 — 250 A</span><span class="sub">14 strings · 252 modules</span></td><td>160,0 kWc</td></tr>
+      <tr><td><span class="tag"><span class="chip c3"></span>ONDU 3 — 250 A</span><span class="sub">13 strings · 234 modules</span></td><td>148,6 kWc</td></tr>
+      <tr><td><span class="tag"><span class="chip c4"></span>ONDU 4 — 250 A</span><span class="sub">12 strings · 216 modules</span></td><td>137,2 kWc</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>Total<span class="sub">53 strings · 954 modules</span></td><td>605,8 kWc</td></tr>
+    </tfoot>
+  </table>
+
+  <p class="note">Courant PV maximal ≈ 866 A sous 400 V triphasé, réparti sur les quatre arrivées (≈ 217 A chacune). Consigner le régime de neutre et le pouvoir de coupure sur le schéma unifilaire avant intervention.</p>
+
+  <footer>
+    <b>DV Energy Solutions</b><br>
+    Consigner l’armoire avant toute intervention. La coupure AC ne supprime pas la tension côté DC : les strings restent sous tension dès qu’ils sont éclairés.
+  </footer>
+
+</main>
+</body>
+</html>
